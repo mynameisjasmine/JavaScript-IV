@@ -35,7 +35,7 @@ grade(subject) {
 }
 
 gradeCheck() {
-return `${students.grade}`
+  return `${students.studentname}'s current grade is: ${students.grade}`
 }
 }
 
@@ -81,7 +81,7 @@ return `${this.name} debugs ${this.studentname}'s code on ${subject}`;
 }
 
 gradeCheck() {
-return `${students.grade}`
+  return `${students.studentname}'s current grade is: ${students.grade}`
 }
 
 }
@@ -109,7 +109,7 @@ studentname: 'Jasmine',
 previousBackground:'Biotech',
 className: 'Web21',
 favSubjects: ['Javascript','C++', 'Java' ],
-grade: Math.random(2)
+grade: Math.floor(Math.random()* 20)
 
 })
 
