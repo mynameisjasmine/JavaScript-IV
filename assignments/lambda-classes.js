@@ -37,13 +37,37 @@ class Instructor extends Person {
 }
 
 
-//class Student extends v
+class Student extends Instructor {
+  constructor(info){
+  super(info)
+  this.favSubjects = info.favSubjects
+  this.studentname = info.studentname
+}
 
+listsSubjects() {
+  return this.favSubjects
+}
+
+PRAssignment(subject) {
+  return `${this.studentname} has submitted a PR for ${subject}`
+}
+
+}
 
 
 
 
 //// OBJECTS
+
+const students = new Student({
+  studentname: 'Jasmine',
+  previousBackground:'Biotech',
+  className: 'Web21',
+  favSubjects: ['Javascript','C++', 'Java' ]
+  //listsSubjects:
+  //PRAssignment:
+  //sprintChallenge
+})
 
 
 
@@ -70,4 +94,6 @@ const dan = new Instructor({
 
 console.log(fred.speak()); // Hello my name is Fred, I am from Mars.
 console.log(dan.demo('cats')); // Today we are learning about (subject)
-console.log(dan.grade('arrays')) // Sandy receives a perfect score on (subject
+console.log(dan.grade('arrays')); // Sandy receives a perfect score on (subject)
+console.log(students.listsSubjects()); // Javascript','C++', 'Java
+console.log(students.PRAssignment('Object Literals')); // Jasmine has submitted a PR assignment for Object Literals
