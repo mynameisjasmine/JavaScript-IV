@@ -1,6 +1,5 @@
 // CODE here for your Lambda Classes
 
-
 class Person {
     constructor(info) {
     this.name = info.name
@@ -52,6 +51,10 @@ PRAssignment(subject) {
   return `${this.studentname} has submitted a PR for ${subject}`
 }
 
+sprintChallenge(subject) {
+   return `${this.studentname} has begun sprint challenge on ${subject}`
+}
+
 }
 
 
@@ -97,3 +100,4 @@ console.log(dan.demo('cats')); // Today we are learning about (subject)
 console.log(dan.grade('arrays')); // Sandy receives a perfect score on (subject)
 console.log(students.listsSubjects()); // Javascript','C++', 'Java
 console.log(students.PRAssignment('Object Literals')); // Jasmine has submitted a PR assignment for Object Literals
+console.log(students.sprintChallenge('Closures')); // Jasmine has begun sprint challenge on Closures
