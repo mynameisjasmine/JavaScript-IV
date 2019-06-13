@@ -1,5 +1,4 @@
 // CODE here for your Lambda Classes
-
 class Person {
     constructor(info) {
     this.name = info.name
@@ -27,11 +26,11 @@ class Instructor extends Person {
 
 
   demo(subject) {
-    return `Today we are learning about ${subject}`
+    return `Today we are learning about ${subject}`;
   }
 
   grade(subject) {
-    return `${this.studentname} receives a perfect score on ${subject}`
+    return `${this.studentname} receives a perfect score on ${subject}`;
   }
 }
 
@@ -48,11 +47,29 @@ listsSubjects() {
 }
 
 PRAssignment(subject) {
-  return `${this.studentname} has submitted a PR for ${subject}`
+  return `${this.studentname} has submitted a PR for ${subject}`;
 }
 
 sprintChallenge(subject) {
-   return `${this.studentname} has begun sprint challenge on ${subject}`
+   return `${this.studentname} has begun sprint challenge on ${subject}`;
+}
+
+}
+
+
+class ProjectManager extends Student {
+  constructor(info){
+  super(info)
+  this.name = info.name
+  this.studentname = info.studentname
+}
+
+standUp(channel) {
+  return `${this.name} announces to ${channel}: @channel standy times`;
+}
+
+debugsCode(subject){
+  return `${this.name} debugs ${this.studentname}'s code on ${subject}`;
 }
 
 }
@@ -62,14 +79,25 @@ sprintChallenge(subject) {
 
 //// OBJECTS
 
+
+const pat = new ProjectManager({
+      name: 'Pat',
+      age: '38',
+      gradClassName: 'WEB18',
+      favInstructor: 'Brett Madrid',
+      location: 'Petaluma, Ca',
+      specialty: 'Empathetic to the struggle of Redux',
+      favLanguage: 'JavaScript',
+      catchPhrase: 'Lets google that together.',
+      studentname: 'Tommy'
+});
+
 const students = new Student({
   studentname: 'Jasmine',
   previousBackground:'Biotech',
   className: 'Web21',
   favSubjects: ['Javascript','C++', 'Java' ]
-  //listsSubjects:
-  //PRAssignment:
-  //sprintChallenge
+  
 })
 
 
@@ -101,3 +129,5 @@ console.log(dan.grade('arrays')); // Sandy receives a perfect score on (subject)
 console.log(students.listsSubjects()); // Javascript','C++', 'Java
 console.log(students.PRAssignment('Object Literals')); // Jasmine has submitted a PR assignment for Object Literals
 console.log(students.sprintChallenge('Closures')); // Jasmine has begun sprint challenge on Closures
+console.log(pat.standUp('web21_pat')); // Pat announces to web21_pat: @channel standy times
+console.log(pat.debugsCode('CSS')); // Pat debugs Tommy's code on CSS
