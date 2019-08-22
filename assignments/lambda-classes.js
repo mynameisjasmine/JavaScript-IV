@@ -92,9 +92,9 @@ gradeCheck() {
 //// OBJECTS
 
 
-const pat = new ProjectManager({
-    name: 'Pat',
-    age: '38',
+const dave = new ProjectManager({
+    name: 'David',
+    age: '31',
     gradClassName: 'WEB18',
     favInstructor: 'Brett Madrid',
     location: 'Petaluma, Ca',
@@ -107,7 +107,7 @@ const pat = new ProjectManager({
 const students = new Student({
 studentname: 'Jasmine',
 previousBackground:'Biotech',
-className: 'Web21',
+className: 'Web23',
 favSubjects: ['Javascript','C++', 'Java' ],
 grade: Math.floor(Math.random()* 20)
 
@@ -144,6 +144,6 @@ console.log(dan.gradeCheck(students.grade)); // * Randomly generates student's g
 console.log(students.listsSubjects()); // Javascript','C++', 'Java
 console.log(students.PRAssignment('Object Literals')); // Jasmine has submitted a PR assignment for Object Literals
 console.log(students.sprintChallenge('Closures')); // Jasmine has begun sprint challenge on Closures
-console.log(pat.standUp('web21_pat')); // Pat announces to web21_pat: @channel standy times
-console.log(pat.debugsCode('CSS')); // Pat debugs Tommy's code on CSS
+console.log(dave.standUp('web23_channel')); // Pat announces to web21_pat: @channel standy times
+console.log(dave.debugsCode('CSS')); // Pat debugs Tommy's code on CSS
 console.log(dan.gradeCheck(students.grade)); // * Randomly generates student's grade
