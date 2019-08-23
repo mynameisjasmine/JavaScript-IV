@@ -135,8 +135,7 @@ class GameObject {
          name: 'Lord Valor',
            team: 'The Round Table',
           weapons: [
-            'Lance',
-             'Flail',
+            'Flail',
           ],
            language: 'Common Tongue',
          });
